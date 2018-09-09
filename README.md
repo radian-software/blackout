@@ -89,7 +89,7 @@ There are at least three other popular packages similar to Blackout:
 * [`dim.el`][dim]
 
 Blackout provides the same core features as all three of these
-packages, and is simpler to use. The following sections show
+packages, and is simpler to use. The following section shows
 comparisons of the same code in all four packages.
 
     (blackout 'auto-fill-mode)
