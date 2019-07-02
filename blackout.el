@@ -1,4 +1,4 @@
-;;; blackout.el --- Better mode lighter overriding. -*- lexical-binding: t -*-
+;;; blackout.el --- Better mode lighter overriding -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2018 Radon Rosborough
 
