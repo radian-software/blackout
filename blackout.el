@@ -55,6 +55,12 @@
 
 (require 'subr-x)
 
+(defvar use-package-keywords)
+(declare-function use-package-as-mode "ext:use-package-core")
+(declare-function use-package-concat "ext:use-package-core")
+(declare-function use-package-error "ext:use-package-core")
+(declare-function use-package-process-keywords "ext:use-package-core")
+
 (defgroup blackout nil
   "Better mode lighter overriding."
   :group 'lisp
