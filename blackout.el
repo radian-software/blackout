@@ -91,6 +91,7 @@ values are variable names."
   (when-let ((spec (assq major-mode blackout--mode-names)))
     (setq-local mode-name (cdr spec))))
 
+;;;###autoload
 (defun blackout (mode &optional replacement)
   "Do not display MODE in the mode line.
 If REPLACEMENT is given, then display it instead. REPLACEMENT may
@@ -104,6 +105,7 @@ be a string or more generally any mode line construct (see
 
 (add-hook 'after-change-major-mode-hook #'blackout--handle-major-mode)
 
+;;;###autoload
 (defun use-package-normalize/:blackout (name _keyword args)
   "Normalize the arguments to `:blackout'.
 The return value is an alist whose cars are mode names and whose
@@ -129,6 +131,7 @@ cdrs are mode line constructs."
       (setq alist (list alist)))
     alist))
 
+;;;###autoload
 (defun use-package-handler/:blackout (name _keyword arg rest state)
   "Handle `:blackout' keyword."
   (let ((body (use-package-process-keywords name rest state)))
@@ -139,6 +142,7 @@ cdrs are mode line constructs."
         `(blackout ',(car spec) ,(cdr spec)))
       arg))))
 
+;;;###autoload
 (with-eval-after-load 'use-package-core
   (when (and (boundp 'use-package-keywords)
              (listp use-package-keywords))
