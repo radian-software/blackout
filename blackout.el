@@ -72,7 +72,7 @@
   ;; mutates the list.
   `((auto-fill-mode . auto-fill-function))
   "Alist of minor modes with nonstandard variable names.
-(Such minor modes are produced by passing a custom `:variable' to
+\(Such minor modes are produced by passing a custom `:variable' to
 `define-minor-mode'.) The keys are minor mode symbols and the
 values are variable names."
   :type '(alist :key-type function :value-type variable))
@@ -109,7 +109,8 @@ be a string or more generally any mode line construct (see
 (defun use-package-normalize/:blackout (name _keyword args)
   "Normalize the arguments to `:blackout'.
 The return value is an alist whose cars are mode names and whose
-cdrs are mode line constructs."
+cdrs are mode line constructs. For documentation on NAME,
+KEYWORD, and ARGS, refer to `use-package'."
   (when (> (length args) 1)
     (use-package-error ":blackout wants at most one argument"))
   ;; If no args given, default to t.
@@ -133,7 +134,9 @@ cdrs are mode line constructs."
 
 ;;;###autoload
 (defun use-package-handler/:blackout (name _keyword arg rest state)
-  "Handle `:blackout' keyword."
+  "Handle `:blackout' keyword.
+For documentation on NAME, KEYWORD, ARG, REST, and STATE, refer
+to `use-package'."
   (let ((body (use-package-process-keywords name rest state)))
     (use-package-concat
      body
