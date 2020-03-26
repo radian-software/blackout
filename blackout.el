@@ -154,6 +154,7 @@ to `use-package'."
 (provide 'blackout)
 
 ;; Local Variables:
+;; sentence-end-double-space: nil
 ;; outline-regexp: ";;;;* "
 ;; End:
 
