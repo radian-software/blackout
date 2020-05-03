@@ -152,6 +152,13 @@ Blackout tries to automatically fix it for you using the information
 in the user option `blackout-minor-mode-variables`; this is why you
 can just write `(blackout 'auto-fill-mode)` and it works.
 
+## Contributor guide
+
+Please see [the contributor guide for my
+projects](https://github.com/raxod502/contributor-guide) for the most
+part. However, this project is small enough that I haven't bothered to
+set up linters, so you don't need to worry about that.
+
 [delight]: https://elpa.gnu.org/packages/delight.html
 [dim]: https://github.com/alezost/dim.el
 [diminish]: https://github.com/myrjola/diminish.el
