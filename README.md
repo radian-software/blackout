@@ -92,34 +92,38 @@ Blackout provides the same core features as all three of these
 packages, and is simpler to use. The following section shows
 comparisons of the same code in all four packages.
 
+    ;; Standard pre-loaded minor mode with a non-matching variable name
     (blackout 'auto-fill-mode)
     (diminish 'auto-fill-function)
-    (delight 'auto-fill-function)
+    (delight 'auto-fill-function nil t)
     (dim-minor-name 'auto-fill-function nil)
 
     (blackout 'auto-fill-mode " Auto-Fill")
     (diminish 'auto-fill-function "Auto-Fill")
-    (delight 'auto-fill-function " Auto-Fill" "simple")
+    (delight 'auto-fill-function " Auto-Fill" t)
     (dim-minor-name 'auto-fill-function " Auto-Fill")
 
+    ;; Major mode
     (blackout 'emacs-lisp-mode "Elisp")
     ;; not supported by diminish.el
     (delight 'emacs-lisp-mode "Elisp" :major)
     (dim-major-name 'emacs-lisp-mode "Elisp")
 
+    ;; Minor mode, not pre-loaded
     (with-eval-after-load 'ivy
       (blackout 'ivy-mode))
     (with-eval-after-load 'ivy
       (diminish 'ivy-mode))
-    (delight 'ivy-mode nil "ivy")
+    (delight 'ivy-mode nil 'ivy)
     (dim-minor-name 'ivy-mode nil 'ivy)
 
+    ;; foo-mode provided by foo.el
     (use-package foo
-      :blackout t)
+      :blackout)
     (use-package foo
-      :diminish t)
+      :diminish)
     (use-package foo
-      :delight (foo-mode nil "foo"))
+      :delight)
     ;; not supported by dim.el
 
     (use-package foo
@@ -127,9 +131,10 @@ comparisons of the same code in all four packages.
     (use-package foo
       :diminish "Foo")
     (use-package foo
-      :delight (" Foo" nil "foo"))
+      :delight " Foo")
     ;; not supported by dim.el
 
+    ;; foo-mode and bar-mode provided by quux.el
     (use-package quux
       :blackout ((foo-mode . " Foo")
                  (bar-mode . " Bar")))
@@ -137,9 +142,8 @@ comparisons of the same code in all four packages.
       :diminish ((foo-mode . "Foo")
                  (bar-mode . "Bar")))
     (use-package quux
-      :delight
-      (foo-mode " Foo" nil "quux")
-      (bar-mode " Bar" nil "quux"))
+      :delight (foo-mode " Foo")
+               (bar-mode " Bar"))
     ;; not supported by dim.el
 
 ## Advanced notes
