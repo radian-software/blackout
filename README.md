@@ -80,6 +80,16 @@ Results in:
     (blackout 'foo-mode " Foo")
     (blackout 'bar-mode " Bar")
 
+## Advanced notes
+
+Some minor modes have a variable name that is different from the mode
+name. For example, the variable name for `auto-fill-mode` is actually
+`auto-fill-function`. In this case, you should provide the variable
+name rather than the mode name. However, since this is unintuitive,
+Blackout tries to automatically fix it for you using the information
+in the user option `blackout-minor-mode-variables`; this is why you
+can just write `(blackout 'auto-fill-mode)` and it works.
+
 ## Comparison
 
 There are at least three other popular packages similar to Blackout:
@@ -145,16 +155,6 @@ comparisons of the same code in all four packages.
       :delight (foo-mode " Foo")
                (bar-mode " Bar"))
     ;; not supported by dim.el
-
-## Advanced notes
-
-Some minor modes have a variable name that is different from the mode
-name. For example, the variable name for `auto-fill-mode` is actually
-`auto-fill-function`. In this case, you should provide the variable
-name rather than the mode name. However, since this is unintuitive,
-Blackout tries to automatically fix it for you using the information
-in the user option `blackout-minor-mode-variables`; this is why you
-can just write `(blackout 'auto-fill-mode)` and it works.
 
 ## Contributor guide
 
