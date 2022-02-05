@@ -7,14 +7,14 @@ display of major and minor modes in the mode line.
 
 ## Installation
 
-The easiest way to install Blackout is using
-[`straight.el`][straight.el]:
+Blackout is available on [MELPA][melpa]. My favorite option is to
+install it using [`straight.el`][straight.el]:
 
-    (straight-use-package
-     '(blackout :host github :repo "raxod502/blackout"))
+    (straight-use-package 'el-patch)
 
-You may use any other package manager which supports installation from
-source (Blackout is not yet listed on MELPA).
+However, you may install using any other package manager if you
+prefer, including the built-in `package.el`, assuming you configure it
+to talk to MELPA.
 
 ## Usage
 
@@ -166,5 +166,6 @@ set up linters, so you don't need to worry about that.
 [delight]: https://elpa.gnu.org/packages/delight.html
 [dim]: https://github.com/alezost/dim.el
 [diminish]: https://github.com/myrjola/diminish.el
+[melpa]: http://melpa.org
 [straight.el]: https://github.com/raxod502/straight.el
 [use-package]: https://github.com/jwiegley/use-package
