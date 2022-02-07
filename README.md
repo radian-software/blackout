@@ -10,7 +10,7 @@ display of major and minor modes in the mode line.
 Blackout is available on [MELPA][melpa]. My favorite option is to
 install it using [`straight.el`][straight.el]:
 
-    (straight-use-package 'el-patch)
+    (straight-use-package 'blackout)
 
 However, you may install using any other package manager if you
 prefer, including the built-in `package.el`, assuming you configure it
