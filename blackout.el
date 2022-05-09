@@ -1,10 +1,10 @@
 ;;; blackout.el --- Better mode lighter overriding -*- lexical-binding: t -*-
 
-;; Copyright (C) 2018 Radon Rosborough
+;; Copyright (C) 2018-2022 Radian LLC and contributors
 
-;; Author: Radon Rosborough <radon.neon@gmail.com>
+;; Author: Radian LLC <contact+blackout@radian.codes>
 ;; Created: 12 Aug 2018
-;; Homepage: https://github.com/raxod502/blackout
+;; Homepage: https://github.com/radian-software/blackout
 ;; Keywords: extensions
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
@@ -47,7 +47,7 @@
 ;;       :blackout ((foo-mode . " Foo")
 ;;                  (bar-mode . " Bar")))
 
-;; Please see https://github.com/raxod502/blackout for more information.
+;; Please see https://github.com/radian-software/blackout for more information.
 
 ;;; Code:
 
@@ -65,7 +65,7 @@
 (defgroup blackout nil
   "Better mode lighter overriding."
   :group 'lisp
-  :link '(url-link :tag "GitHub" "https://github.com/raxod502/blackout")
+  :link '(url-link :tag "GitHub" "https://github.com/radian-software/blackout")
   :link '(emacs-commentary-link :tag "Commentary" "blackout"))
 
 (defcustom blackout-minor-mode-variables

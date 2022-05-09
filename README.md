@@ -159,9 +159,9 @@ comparisons of the same code in all four packages.
 ## Contributor guide
 
 Please see [the contributor guide for my
-projects](https://github.com/raxod502/contributor-guide) for the most
-part. However, this project is small enough that I haven't bothered to
-set up linters, so you don't need to worry about that.
+projects](https://github.com/radian-software/contributor-guide) for
+the most part. However, this project is small enough that I haven't
+bothered to set up linters, so you don't need to worry about that.
 
 [delight]: https://elpa.gnu.org/packages/delight.html
 [dim]: https://github.com/alezost/dim.el
